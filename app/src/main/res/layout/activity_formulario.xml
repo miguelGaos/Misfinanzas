@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilConcepto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Concepto (ej. Almuerzo)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etConcepto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilMonto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Monto">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMonto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/rgTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp">
+
+            <RadioButton
+                android:id="@+id/rbIngreso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingreso"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rbGasto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gasto"
+                android:layout_marginStart="16dp"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Guardar Transacción"
+            app:cornerRadius="8dp"
+            android:layout_marginTop="32dp"/>
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Eliminar Registro"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#F44336"
+            app:cornerRadius="8dp"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+</ScrollView>
